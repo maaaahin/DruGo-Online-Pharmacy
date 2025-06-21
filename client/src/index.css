@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Poppins:wght@300;400&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* .poppins-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.poppins-regular {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+} 
+
+.playfair-display-<uniquifier> {
+  font-family: "Playfair Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}  */
+
+
+/* navbar css */
+.navbar {
+  font-family: "Poppins", sans-serif;
+  font-size: 27px;
+  line-height: 26px;
+  background: #fff !important;
+  padding: 1rem 2rem;
+}
+
+.nav-link
+{
+  margin-right: 0rem;
+  margin-left: 1rem;
+  font-weight: bold !important;
+}
+
+.text-primary {
+  color: #28A5F1 !important;
+}
+.text-danger {
+  color: #F0B445 !important;
+}
+
+.active
+{
+  color: #F0B445 !important;
+  font-weight: bold !important;
+}
+
+
+.footer
+{
+  background: #28A5F1;
+  color: white;
+  padding: 25px;
+}
+
+.footer a
+{
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+}  
+.footer a:hover
+{
+  color: #F0B445;
+  border-bottom: 1px solid #F0B445;
+}
+
+
+
+.btn-primary
+{
+  background-color:#28A5F1 !important;
+  border: #28A5F1;
+}
+
+.btn-danger
+{
+  background-color:#F0B445 !important;
+  border: #F0B445;
+}
+
+/* styles.css or index.css */
+
+.scrollable-dropdown-menu {
+  max-height: 300px; /* Adjust this value as needed */
+  overflow-y: auto;  /* Enables vertical scrolling when content exceeds max-height */
+  /* You can also add some padding for better aesthetics */
+  padding-right: 5px; /* To prevent scrollbar from touching content */
+}
+
+/* Optional: Style the scrollbar for webkit browsers */
+.scrollable-dropdown-menu::-webkit-scrollbar {
+  width: 8px;
+}
+
+.scrollable-dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.scrollable-dropdown-menu::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.scrollable-dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

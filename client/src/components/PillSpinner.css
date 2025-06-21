@@ -1,0 +1,18 @@
+.pill-loader {
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+    background: linear-gradient(90deg, #28A5F1 50%, #F0B445 50%);
+    animation: rotate-pill 1s linear infinite;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  
+  @keyframes rotate-pill {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
