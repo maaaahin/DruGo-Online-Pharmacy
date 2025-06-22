@@ -16,9 +16,16 @@ dotenv.config();
 //database config
 connectDB();
 
+import path from 'path';
+
+
+
 //middleware
 app.use(cors())
 app.use(express.json())
+const _dirname = path.dirname("");
+const buildPath = path.join(_dirname, './client/build');
+app.use(express.static(buildPath));
 app.use(morgan('dev'))
 
 //routes
