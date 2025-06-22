@@ -19,15 +19,11 @@ dotenv.config();
 //database config
 connectDB();
 
-import path from 'path';
 
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
 //middleware
 app.use(cors())
 app.use(express.json())
-const buildPath = join(__dirname, './client/build');
 
 app.use(express.static(buildPath));
 app.use(morgan('dev'))
@@ -52,3 +48,16 @@ app.listen(PORT , ()=>{
     console.log(`Server running on ${process.env.DEV_MODE} mode on port ${PORT}`.bgCyan.white);
 });
 
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+const buildPath = join(__dirname, './client/build');
+app.use(express.static(buildPath));
+
+app.get('*', (req, res) => {
+  res.sendFile(join(buildPath, 'index.html'));
+});
