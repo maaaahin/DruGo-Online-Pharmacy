@@ -8,8 +8,6 @@ import categoryRoutes from './routes/categoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors';
 
-import { fileURLToPath } from 'url';
-import { dirname, join } from 'path';
 //rest object
 const app = express()
 
@@ -25,7 +23,6 @@ connectDB();
 app.use(cors())
 app.use(express.json())
 
-app.use(express.static(buildPath));
 app.use(morgan('dev'))
 
 //routes
