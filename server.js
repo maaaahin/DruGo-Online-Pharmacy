@@ -7,6 +7,9 @@ import authRoutes from './routes/authRoute.js'
 import categoryRoutes from './routes/categoryRoutes.js'
 import productRoutes from './routes/productRoutes.js'
 import cors from 'cors';
+
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
 //rest object
 const app = express()
 
@@ -19,12 +22,13 @@ connectDB();
 import path from 'path';
 
 
-
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
 //middleware
 app.use(cors())
 app.use(express.json())
-const _dirname = path.dirname("");
-const buildPath = path.join(_dirname, './client/build');
+const buildPath = join(__dirname, './client/build');
+
 app.use(express.static(buildPath));
 app.use(morgan('dev'))
 
